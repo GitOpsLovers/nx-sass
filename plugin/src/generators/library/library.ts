@@ -8,9 +8,9 @@ import normalizeOptions from './lib/normalize-options';
 import setGeneratorDefaults from './lib/set-generator-defaults';
 
 /**
- * Generate a new application.
+ * Generate a new library.
  */
-export async function applicationGeneratorInternal(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
+export async function libraryGeneratorInternal(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
   const options = await normalizeOptions(tree, schema);
 
   await jsInitGenerator(tree, {
@@ -30,10 +30,10 @@ export async function applicationGeneratorInternal(tree: Tree, schema: Partial<S
   };
 }
 
-export async function applicationGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
-  return applicationGeneratorInternal(tree, {
+export async function libraryGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
+  return libraryGeneratorInternal(tree, {
     ...schema,
   });
 }
 
-export default applicationGenerator;
+export default libraryGenerator;

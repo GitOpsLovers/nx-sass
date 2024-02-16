@@ -1,5 +1,5 @@
 /**
- * Interface for the application generator options
+ * Interface for the library generator options
  */
 export interface Schema {
   name: string;

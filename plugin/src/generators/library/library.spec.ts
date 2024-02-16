@@ -1,7 +1,7 @@
 import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
-import generator from './application';
+import generator from './library';
 import { NxSassGeneratorSchema } from './schema';
 
 describe('NxSass generator', () => {

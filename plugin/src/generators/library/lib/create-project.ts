@@ -23,7 +23,7 @@ export default function createProject(tree: Tree, options: NormalizedSchema) {
       },
     },
     root: options.directory,
-    projectType: 'application',
+    projectType: 'library',
   };
 
   addProjectConfiguration(tree, options.name, project);
