@@ -1,6 +1,6 @@
 {
-  "name": "nx-cdk",
-  "version": "0.0.1",
+  "name": "nx-sass",
+  "version": "1.0.0",
   "type": "commonjs",
   "generators": "./generators.json",
   "executors": "./executors.json"

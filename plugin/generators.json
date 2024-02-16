@@ -1,14 +1,14 @@
 {
   "generators": {
-    "nx-cdk": {
-      "factory": "./src/generators/nx-cdk/generator",
-      "schema": "./src/generators/nx-cdk/schema.json",
-      "description": "nx-cdk generator"
+    "nx-sass": {
+      "factory": "./src/generators/nx-sass/generator",
+      "schema": "./src/generators/nx-sass/schema.json",
+      "description": "nx-sass generator"
     },
-    "NxCdk": {
-      "factory": "./src/generators/nx-cdk/generator",
-      "schema": "./src/generators/nx-cdk/schema.json",
-      "description": "NxCdk generator"
+    "NxSass": {
+      "factory": "./src/generators/nx-sass/generator",
+      "schema": "./src/generators/nx-sass/schema.json",
+      "description": "NxSass generator"
     }
   }
 }

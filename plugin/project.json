@@ -1,5 +1,5 @@
 {
-  "name": "nx-cdk",
+  "name": "nx-sass",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "plugin/src",
   "projectType": "library",
@@ -8,7 +8,7 @@
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/./nx-cdk",
+        "outputPath": "dist/./nx-sass",
         "main": "plugin/src/index.ts",
         "tsConfig": "plugin/tsconfig.lib.json",
         "assets": [

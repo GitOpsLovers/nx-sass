@@ -8,16 +8,16 @@ import {
   Tree,
 } from '@nrwl/devkit';
 import * as path from 'path';
-import { NxCdkGeneratorSchema } from './schema';
+import { NxSassGeneratorSchema } from './schema';
 
-interface NormalizedSchema extends NxCdkGeneratorSchema {
+interface NormalizedSchema extends NxSassGeneratorSchema {
   projectName: string;
   projectRoot: string;
   projectDirectory: string;
   parsedTags: string[];
 }
 
-function normalizeOptions(tree: Tree, options: NxCdkGeneratorSchema): NormalizedSchema {
+function normalizeOptions(tree: Tree, options: NxSassGeneratorSchema): NormalizedSchema {
   const name = names(options.name).fileName;
   const projectDirectory = options.directory
     ? `${names(options.directory).fileName}/${name}`
@@ -47,7 +47,7 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
     generateFiles(tree, path.join(__dirname, 'files'), options.projectRoot, templateOptions);
 }
 
-export default async function (tree: Tree, options: NxCdkGeneratorSchema) {
+export default async function (tree: Tree, options: NxSassGeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options);
   addProjectConfiguration(
     tree,
@@ -58,7 +58,7 @@ export default async function (tree: Tree, options: NxCdkGeneratorSchema) {
       sourceRoot: `${normalizedOptions.projectRoot}/src`,
       targets: {
         build: {
-          executor: "nx-cdk:build",
+          executor: "nx-sass:build",
         },
       },
       tags: normalizedOptions.parsedTags,

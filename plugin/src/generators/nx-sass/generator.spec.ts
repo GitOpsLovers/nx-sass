@@ -2,11 +2,11 @@ import { createTreeWithEmptyWorkspace } from '@nrwl/devkit/testing';
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
 
 import generator from './generator';
-import { NxCdkGeneratorSchema } from './schema';
+import { NxSassGeneratorSchema } from './schema';
 
-describe('NxCdk generator', () => {
+describe('NxSass generator', () => {
   let appTree: Tree;
-  const options: NxCdkGeneratorSchema = { name: 'test' };
+  const options: NxSassGeneratorSchema = { name: 'test' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace({layout: 'apps-libs'});
