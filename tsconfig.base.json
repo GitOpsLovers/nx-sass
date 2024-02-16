@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "nx-cdk": ["nx-cdk/src/index.ts"]
+      "nx-cdk": ["plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
