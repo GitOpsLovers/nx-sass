@@ -11,29 +11,37 @@ import setGeneratorDefaults from './lib/set-generator-defaults';
  * Generate a new library.
  */
 export async function libraryGeneratorInternal(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
-  const options = await normalizeOptions(tree, schema);
+    const options = await normalizeOptions(tree, schema);
 
-  await jsInitGenerator(tree, {
+    /* await jsInitGenerator(tree, {
     ...options,
     skipFormat: true,
-  });
+  }); */
 
-  createProject(tree, options);
+    createProject(tree, options);
 
-  await createFiles(tree, options);
+    await createFiles(tree, options);
 
-  setGeneratorDefaults(tree, options);
+    setGeneratorDefaults(tree, options);
 
-  return () => {
-    installPackagesTask(tree);
-    logShowProjectCommand(options.name);
-  };
+    return () => {
+        installPackagesTask(tree);
+        logShowProjectCommand(options.name);
+    };
 }
 
+/**
+ * Library generator
+ *
+ * @param tree The current file tree
+ * @param schema The options provided to the generator
+ *
+ * @returns A generator callback
+ */
 export async function libraryGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
-  return libraryGeneratorInternal(tree, {
-    ...schema,
-  });
+    return libraryGeneratorInternal(tree, {
+        ...schema,
+    });
 }
 
 export default libraryGenerator;

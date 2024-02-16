@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "GeneratorNxApp",
+  "$id": "GeneratorNxLib",
   "title": "Creates a Sass library",
   "type": "object",
   "cli": "nx",
@@ -27,5 +27,5 @@
     }
   },
   "additionalProperties": false,
-  "required": ["name"]
+  "required": ["name", "directory"]
 }

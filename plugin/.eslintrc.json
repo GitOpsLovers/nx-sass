@@ -14,7 +14,8 @@
       "rules": {
         "max-len": ["error", 150],
         "import/no-extraneous-dependencies": "off",
-        "import/extensions": ["error", "never", { "json": "never" }]
+        "import/extensions": ["error", "never", { "json": "never" }],
+        "@typescript-eslint/indent": ["error", 4]
       }
     },
     {
