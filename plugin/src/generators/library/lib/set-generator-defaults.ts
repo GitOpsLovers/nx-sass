@@ -9,8 +9,8 @@ export default function setGeneratorDefaults(tree: Tree, options: NormalizedSche
 
   nxJson.generators = nxJson.generators ?? {};
 
-  nxJson.generators['nx-sass:library'] = {
-    ...(nxJson.generators['nx-sass:library'] || {}),
+  nxJson.generators['@nx/sass:library'] = {
+    ...(nxJson.generators['@nx/sass:library'] || {}),
   };
 
   updateNxJson(tree, nxJson);
