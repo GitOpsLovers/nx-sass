@@ -3,8 +3,11 @@ import { NormalizedSchema } from './normalized-schema';
 
 /**
  * Create a new project in the workspace.
+ *
+ * @param tree The current file tree
+ * @param options The options provided to the generator
  */
-export default function createProject(tree: Tree, options: NormalizedSchema) {
+export default function createProject(tree: Tree, options: NormalizedSchema): void {
     const project: ProjectConfiguration = {
         name: options.name,
         targets: {
@@ -22,7 +25,7 @@ export default function createProject(tree: Tree, options: NormalizedSchema) {
                 defaultConfiguration: 'production',
             },
         },
-        root: options.directory,
+        root: `libs/${options.directory}`,
         projectType: 'library',
     };
 

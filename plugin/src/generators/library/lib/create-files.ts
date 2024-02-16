@@ -13,7 +13,7 @@ export default async function createFiles(tree: Tree, options: NormalizedSchema)
     generateFiles(
         tree,
         joinPathFragments(__dirname, '../files'),
-        options.directory,
+        `libs/${options.directory}`,
         substitutions,
     );
 }
