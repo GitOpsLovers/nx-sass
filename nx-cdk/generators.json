@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "nx-cdk": {
+      "factory": "./src/generators/nx-cdk/generator",
+      "schema": "./src/generators/nx-cdk/schema.json",
+      "description": "nx-cdk generator"
+    },
+    "NxCdk": {
+      "factory": "./src/generators/nx-cdk/generator",
+      "schema": "./src/generators/nx-cdk/schema.json",
+      "description": "NxCdk generator"
+    }
+  }
+}
