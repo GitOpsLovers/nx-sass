@@ -1,5 +1,8 @@
-export interface NxSassGeneratorSchema {
+/**
+ * Interface for the application generator options
+ */
+export interface Schema {
     name: string;
-    tags?: string;
     directory?: string;
+    tags?: string;
 }

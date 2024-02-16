@@ -1,69 +1,41 @@
-import {
-  addProjectConfiguration,
-  formatFiles,
-  generateFiles,
-  getWorkspaceLayout,
-  names,
-  offsetFromRoot,
-  Tree,
-} from '@nrwl/devkit';
-import * as path from 'path';
-import { NxSassGeneratorSchema } from './schema';
+import { GeneratorCallback, Tree, installPackagesTask } from '@nx/devkit';
+import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { initGenerator as jsInitGenerator } from '@nx/js';
+import { Schema } from './schema';
+import createFiles from './lib/create-files';
+import createProject from './lib/create-project';
+import normalizeOptions from './lib/normalize-options';
+import setGeneratorDefaults from './lib/set-generator-defaults';
 
-interface NormalizedSchema extends NxSassGeneratorSchema {
-  projectName: string;
-  projectRoot: string;
-  projectDirectory: string;
-  parsedTags: string[];
-}
+/**
+ *
+ */
+export async function applicationGeneratorInternal(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
+  const options = await normalizeOptions(tree, schema);
 
-function normalizeOptions(tree: Tree, options: NxSassGeneratorSchema): NormalizedSchema {
-  const name = names(options.name).fileName;
-  const projectDirectory = options.directory
-    ? `${names(options.directory).fileName}/${name}`
-    : name;
-  const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-');
-  const projectRoot = `${getWorkspaceLayout(tree).libsDir}/${projectDirectory}`;
-  const parsedTags = options.tags
-    ? options.tags.split(',').map((s) => s.trim())
-    : [];
-
-  return {
+  await jsInitGenerator(tree, {
     ...options,
-    projectName,
-    projectRoot,
-    projectDirectory,
-    parsedTags,
+    tsConfigName: 'tsconfig.json',
+    js: false,
+    skipFormat: true,
+  });
+
+  createProject(tree, options);
+
+  await createFiles(tree, options);
+
+  setGeneratorDefaults(tree, options);
+
+  return () => {
+    installPackagesTask(tree);
+    logShowProjectCommand(options.name);
   };
 }
 
-function addFiles(tree: Tree, options: NormalizedSchema) {
-    const templateOptions = {
-      ...options,
-      ...names(options.name),
-      offsetFromRoot: offsetFromRoot(options.projectRoot),
-      template: ''
-    };
-    generateFiles(tree, path.join(__dirname, 'files'), options.projectRoot, templateOptions);
+export async function applicationGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
+  return applicationGeneratorInternal(tree, {
+    ...schema,
+  });
 }
 
-export default async function (tree: Tree, options: NxSassGeneratorSchema) {
-  const normalizedOptions = normalizeOptions(tree, options);
-  addProjectConfiguration(
-    tree,
-    normalizedOptions.projectName,
-    {
-      root: normalizedOptions.projectRoot,
-      projectType: 'library',
-      sourceRoot: `${normalizedOptions.projectRoot}/src`,
-      targets: {
-        build: {
-          executor: "nx-sass:build",
-        },
-      },
-      tags: normalizedOptions.parsedTags,
-    }
-  );
-  addFiles(tree, normalizedOptions);
-  await formatFiles(tree);
-}
+export default applicationGenerator;
