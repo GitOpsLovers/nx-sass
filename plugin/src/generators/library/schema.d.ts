@@ -3,5 +3,5 @@
  */
 export interface Schema {
     name: string;
-    directory?: string;
+    directory: string;
 }

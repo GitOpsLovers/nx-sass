@@ -16,7 +16,8 @@ export default function createProject(tree: Tree, options: NormalizedSchema): vo
                 outputs: ['{options.outputPath}'],
                 options: {
                     outputPath: 'dist',
-                    main: `${options.directory}/src/main.scss`,
+                    main: `libs/${options.directory}/src/main.scss`,
+                    sourceMap: true,
                 },
                 configurations: {
                     production: {},

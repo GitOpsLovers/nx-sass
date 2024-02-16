@@ -1,1 +1,8 @@
-export interface BuildExecutorSchema {} // eslint-disable-line
+/**
+ * Schema for the compile executor options
+ */
+export interface CompileExecutorSchema {
+    outputPath: string;
+    main: string;
+    sourceMap: boolean;
+}
