@@ -12,7 +12,7 @@ export default function createProject(tree: Tree, options: NormalizedSchema) {
         executor: '@nx/sass:compiler',
         outputs: ['{options.outputPath}'],
         options: {
-          outputPath: 'dsdsdsd',
+          outputPath: 'dist',
           main: `${options.directory}/src/main.scss`,
         },
         configurations: {

@@ -4,5 +4,5 @@
   "description": "Compiles Sass files to CSS using Sass",
   "type": "object",
   "properties": {},
-  "required": ["buildTarget"]
+  "required": ["outputPath"]
 }
