@@ -5,16 +5,15 @@ import { NormalizedSchema } from './normalized-schema';
  * Create a new project in the workspace.
  */
 export default function createProject(tree: Tree, options: NormalizedSchema) {
-  console.log(options);
   const project: ProjectConfiguration = {
     name: options.name,
     targets: {
       build: {
-        executor: 'sdsdsdsds',
+        executor: '@nx/sass:compiler',
         outputs: ['{options.outputPath}'],
         options: {
           outputPath: 'dsdsdsd',
-          index: 'sdsdsdsds',
+          main: `${options.directory}/src/main.scss`,
         },
         configurations: {
           production: {},

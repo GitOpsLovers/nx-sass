@@ -1,9 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "version": 2,
-  "title": "Build executor",
-  "description": "",
+  "title": "Schema for Nx sass-compiler executor",
+  "description": "Compiles Sass files to CSS using Sass",
   "type": "object",
   "properties": {},
-  "required": []
+  "required": ["buildTarget"]
 }

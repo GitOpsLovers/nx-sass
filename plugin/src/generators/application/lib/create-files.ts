@@ -7,7 +7,7 @@ import { NormalizedSchema } from './normalized-schema';
 export default async function createFiles(tree: Tree, options: NormalizedSchema) {
   const substitutions = {
     appName: options.name,
-    style: '.scss',
+    style: 'scss',
   };
 
   generateFiles(
