@@ -14,10 +14,6 @@ export default async function normalizeOptions(host: Tree, options: Partial<Sche
     callingGenerator: 'nx-sass:application',
   });
 
-  const parsedTags = options.tags
-    ? options.tags.split(',').map((s) => s.trim())
-    : [];
-
   // Set defaults and then overwrite with user options
-  return { ...options, name: appProjectName, parsedTags };
+  return { ...options, name: appProjectName };
 }

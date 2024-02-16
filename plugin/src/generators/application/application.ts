@@ -8,15 +8,13 @@ import normalizeOptions from './lib/normalize-options';
 import setGeneratorDefaults from './lib/set-generator-defaults';
 
 /**
- *
+ * Generate a new application.
  */
 export async function applicationGeneratorInternal(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
   const options = await normalizeOptions(tree, schema);
 
   await jsInitGenerator(tree, {
     ...options,
-    tsConfigName: 'tsconfig.json',
-    js: false,
     skipFormat: true,
   });
 

@@ -5,18 +5,16 @@ import { NormalizedSchema } from './normalized-schema';
  * Create a new project in the workspace.
  */
 export default function createProject(tree: Tree, options: NormalizedSchema) {
+  console.log(options);
   const project: ProjectConfiguration = {
     name: options.name,
-    projectType: 'application',
-    root: options.directory,
-    tags: options.parsedTags,
     targets: {
       build: {
-        executor: '',
+        executor: 'sdsdsdsds',
         outputs: ['{options.outputPath}'],
         options: {
-          outputPath: '',
-          index: '',
+          outputPath: 'dsdsdsd',
+          index: 'sdsdsdsds',
         },
         configurations: {
           production: {},
@@ -25,6 +23,8 @@ export default function createProject(tree: Tree, options: NormalizedSchema) {
         defaultConfiguration: 'production',
       },
     },
+    root: options.directory,
+    projectType: 'application',
   };
 
   addProjectConfiguration(tree, options.name, project);
