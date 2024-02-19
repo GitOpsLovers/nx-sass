@@ -11,7 +11,7 @@ export default function addDependencies(tree: Tree): GeneratorCallback {
     return addDependenciesToPackageJson(
         tree,
         {},
-        { sass: '1.71.0' },
+        { sass: '1.71.0', 'nx-stylelint': '17.1.4' },
         undefined,
         false,
     );

@@ -10,6 +10,8 @@ import { NormalizedSchema } from './normalized-schema';
 export default function createProject(tree: Tree, options: NormalizedSchema): void {
     const project: ProjectConfiguration = {
         name: options.name,
+        projectType: 'library',
+        root: `libs/${options.directory}`,
         targets: {
             build: {
                 executor: 'nx-sass:compiler',
@@ -33,10 +35,17 @@ export default function createProject(tree: Tree, options: NormalizedSchema): vo
                     main: `libs/${options.directory}/src/main.scss`,
                     sourceMap: true,
                 },
+            },
+            lint: {
+                executor: "nx-stylelint:lint",
+                outputs: ['{options.outputFile}'],
+                options: {
+                  lintFilePatterns: [`libs/${options.directory}/src/**/*.scss`],
+                  formatter: "compact"
+                }
             }
         },
-        root: `libs/${options.directory}`,
-        projectType: 'library',
+        
     };
 
     addProjectConfiguration(tree, options.name, project);
