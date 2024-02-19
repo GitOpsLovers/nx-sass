@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/bennymeg/nx-electron/master/nx-electron.png" width="240"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/GitOpsLovers/nx-sass/master/sass-logo.png" width="240"></p>
 
 <div align="center">
 
@@ -6,13 +6,11 @@
 
 Electron builders and schematics for Nrwl Nx platform.
 
-[![License](https://img.shields.io/github/license/bennymeg/nx-electron.svg)](https://github.com/bennymeg/nx-electron/blob/master/LICENSE)
-[![NPM Version](https://img.shields.io/npm/v/nx-electron.svg)](https://www.npmjs.com/package/nx-electron)
-![Downloads](https://img.shields.io/npm/dt/nx-electron)
-[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/bennymeg)
-[![Star this repo](https://img.shields.io/github/stars/bennymeg/nx-electron?style=social)](https://github.com/bennymeg/nx-electron)
-
-
+![Static Badge](https://img.shields.io/badge/PRs-welcome-orange)
+![Static Badge](https://img.shields.io/badge/License-MIT-pink)
+![Static Badge](https://img.shields.io/badge/Node-20.11.1-green)
+![Static Badge](https://img.shields.io/badge/NPM-10.2.4-red)
+![GitHub Repo stars](https://img.shields.io/github/stars/GitOpsLovers/nx-sass)
 
 </div>
 
