@@ -37,15 +37,15 @@ export default function createProject(tree: Tree, options: NormalizedSchema): vo
                 },
             },
             lint: {
-                executor: "nx-stylelint:lint",
+                executor: 'nx-stylelint:lint',
                 outputs: ['{options.outputFile}'],
                 options: {
-                  lintFilePatterns: [`libs/${options.directory}/src/**/*.scss`],
-                  formatter: "compact"
-                }
-            }
+                    lintFilePatterns: [`libs/${options.directory}/src/**/*.scss`],
+                    formatter: 'compact',
+                },
+            },
         },
-        
+
     };
 
     addProjectConfiguration(tree, options.name, project);

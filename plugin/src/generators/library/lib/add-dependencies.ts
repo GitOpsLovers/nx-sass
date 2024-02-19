@@ -11,11 +11,11 @@ export default function addDependencies(tree: Tree): GeneratorCallback {
     return addDependenciesToPackageJson(
         tree,
         {},
-        { 
-            sass: '1.71.0', 
+        {
+            sass: '1.71.0',
             stylelint: '16.2.1',
             'stylelint-config-standard-scss': '13.0.0',
-            'nx-stylelint': '17.1.4' 
+            'nx-stylelint': '17.1.4',
         },
         undefined,
         false,

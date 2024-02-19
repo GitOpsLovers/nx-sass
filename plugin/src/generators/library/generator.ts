@@ -2,6 +2,7 @@ import { GeneratorCallback, Tree, installPackagesTask } from '@nx/devkit';
 import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
 import { Schema } from './schema';
 import addDependencies from './lib/add-dependencies';
+import addStylelintConfig from './lib/add-stylelint-config';
 import addStylelintRootConfig from './lib/add-stylelint-root-config';
 import createFiles from './lib/create-files';
 import createProject from './lib/create-project';
@@ -28,6 +29,8 @@ export async function libraryGenerator(tree: Tree, schema: Partial<Schema>): Pro
     addDependencies(tree);
 
     addStylelintRootConfig(tree);
+
+    addStylelintConfig(tree, options);
 
     return () => {
         installPackagesTask(tree);
