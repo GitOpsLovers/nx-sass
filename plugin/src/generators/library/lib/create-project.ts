@@ -25,6 +25,15 @@ export default function createProject(tree: Tree, options: NormalizedSchema): vo
                 },
                 defaultConfiguration: 'production',
             },
+            serve: {
+                executor: 'nx-sass:compiler',
+                options: {
+                    watch: true,
+                    outputPath: 'dist',
+                    main: `libs/${options.directory}/src/main.scss`,
+                    sourceMap: true,
+                },
+            }
         },
         root: `libs/${options.directory}`,
         projectType: 'library',

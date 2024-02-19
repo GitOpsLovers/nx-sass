@@ -58,11 +58,11 @@ nx g nx-sass:lib <sass-lib-name>
 
 ## Building Nx Sass Library
 
-- Run `nx build <sass-app-name>` to build your library.
+- Run `nx build <sass-lib-name>` to build your library.
 
 ## Serving Nx Sass Library
 
-- Run `nx serve <sass-app-name>` to serve your application.
+- Run `nx serve <sass-lib-name>` to serve your application.
 
 ## Linting Nx Sass Library
 
