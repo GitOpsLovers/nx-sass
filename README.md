@@ -4,7 +4,7 @@
 
 # Nx Sass
 
-Electron builders and schematics for Nrwl Nx platform.
+SASS library development tool and builder for Nrwl Nx platform.
 
 ![Static Badge](https://img.shields.io/badge/PRs-welcome-orange)
 ![Static Badge](https://img.shields.io/badge/License-MIT-pink)
@@ -17,7 +17,7 @@ Electron builders and schematics for Nrwl Nx platform.
 
 <hr></br>
 
-# Features
+# 🚀 Features
 
 **NX Sass** is a plugin [NX](https://nx.dev) that allows you to create decoupled libraries based on [SASS](https://sass-lang.com/) for your Frontend projects in monorepo projects.
 
@@ -25,9 +25,9 @@ Electron builders and schematics for Nrwl Nx platform.
 - **Live Update**: Develop your Sass based library with Live Update to automate compilation at every change.
 - **Linting**: Lint your Sass files with Stylelint to follow best practices.
 
-# Getting Started
+# 🏁 Getting Started
 
-## Prerequisite
+## 📋 Prerequisite
 
 This module is based on Nx, you will need to [set up an Nx workspace](https://nx.dev/web/getting-started/getting-started) before you can use nx-sass.
 
@@ -35,39 +35,39 @@ This module is based on Nx, you will need to [set up an Nx workspace](https://nx
 npx create-nx-workspace@latest
 ```
 
-## Installation
+## 💻 Installation
 
 ```bash
 npm install -D nx-sass
 ```
 
-## Creating Nx Sass Library
+## 🛠️ Creating Nx Sass Library
 
 ```bash
 nx g nx-sass:lib <sass-lib-name>
 ```
 
-## Building Nx Sass Library
+## 🏗️ Building Nx Sass Library
 
 - Run `nx build <sass-lib-name>` to build your library.
 
-## Serving Nx Sass Library
+## 🌐 Serving Nx Sass Library
 
 - Run `nx serve <sass-lib-name>` to serve your library for development.
 
-## Linting Nx Sass Library
+## 🧹 Linting Nx Sass Library
 
 - Run `nx lint <sass-app-name>` to lint your library.
 
-## Support
+## ❓ Support
 
 If you're having any problem, please [raise an issue](https://github.com/GitOpsLovers/nx-sass/issues/new) on GitHub and we'll be happy to help.
 
-## Contribute
+## 🤝 Contribute
 
 - Follow [this instructions](https://github.com/GitOpsLovers/nx-sass/blob/master/CONTRIBUTING.md) in order to learn how to contribute to this project.
 
-## Attribution
+## 🙌 Attribution
 
 This project is inspired by several contributions made by the [NX](https://nx.dev) community, especially the [nx-stylelint](https://github.com/Phillip9587/nx-stylelint) project.
 

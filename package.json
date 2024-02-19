@@ -1,10 +1,17 @@
 {
   "name": "@gitopslovers/nx-sass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NX plugin for generating Sass-based projects.",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "npx nx build nx-sass"
+  },
   "private": false,
+  "keywords": [
+    "nx",
+    "nx-plugin",
+    "sass"
+  ],
   "devDependencies": {
     "@nx/eslint-plugin": "18.0.4",
     "@nx/jest": "18.0.4",

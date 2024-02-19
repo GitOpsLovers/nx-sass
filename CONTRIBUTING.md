@@ -1,18 +1,18 @@
 <!-- omit in toc -->
-# Contributing to Nx Sass
+# 🚀 Contributing to Nx Sass
 
 First off, thanks for taking the time to contribute! ❤️
 
 All types of contributions are encouraged and valued. See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions. 🎉
 
 > And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
-> - Star the project
-> - Tweet about it
-> - Refer this project in your project's readme
-> - Mention the project at local meetups and tell your friends/colleagues
+> - ⭐ Star the project
+> - 🐦 Tweet about it
+> - 📖 Refer this project in your project's readme
+> - 👥 Mention the project at local meetups and tell your friends/colleagues
 
 <!-- omit in toc -->
-## Table of Contents
+## 📚 Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [I Have a Question](#i-have-a-question)
@@ -21,7 +21,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [Suggesting Enhancements](#suggesting-enhancements)
 
 
-## Code of Conduct
+## 📜 Code of Conduct
 
 This project and everyone participating in it is governed by the
 [Nx Sass Code of Conduct](https://github.com/GitOpsLovers/nx-sassblob/master/CODE_OF_CONDUCT.md).
@@ -29,7 +29,7 @@ By participating, you are expected to uphold this code. Please report unacceptab
 to <>.
 
 
-## I Have a Question
+## 🤔 I Have a Question
 
 Before you ask a question, it is best to search for existing [Issues](https://github.com/GitOpsLovers/nx-sass/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
@@ -41,9 +41,9 @@ If you then still feel the need to ask a question and need clarification, we rec
 
 We will then take care of the issue as soon as possible.
 
-## I Want To Contribute
+## 🌟 I Want To Contribute
 
-### Reporting Bugs
+### 🐛 Reporting Bugs
 
 <!-- omit in toc -->
 #### Before Submitting a Bug Report
@@ -77,7 +77,7 @@ Once it's filed:
 - A team member will try to reproduce the issue with your provided steps. If there are no reproduction steps or no obvious way to reproduce the issue, the team will ask you for those steps and mark the issue as `needs-repro`. Bugs with the `needs-repro` tag will not be addressed until they are reproduced.
 - If the team is able to reproduce the issue, it will be marked `needs-fix`, as well as possibly other tags (such as `critical`), and the issue will be left to be [implemented by someone](#your-first-code-contribution).
 
-### Suggesting Enhancements
+### 🚀 Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for Nx Sass, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
