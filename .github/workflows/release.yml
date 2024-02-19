@@ -1,11 +1,11 @@
-name: Create Release
+name: 🚀 Create Release
 
 on:
   workflow_dispatch:
 
 jobs:
   release-changelog:
-    name: Changelog & Release
+    name: 📦 Changelog & Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,7 +21,7 @@ jobs:
       - name: 📥 Checkout the code
         uses: actions/checkout@v4
 
-      - name: Update Changelog
+      - name: 📝 Update Changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5.2.0
         with:
@@ -30,4 +30,12 @@ jobs:
           git-user-name: 'gitopslover[bot]'
           git-user-email: '160535767+gitopslover[bot]@users.noreply.github.com'
 
-      
+      - name: 🎉 Create release
+        uses: actions/create-release@v1.1.4
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ steps.app_auth.outputs.token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
