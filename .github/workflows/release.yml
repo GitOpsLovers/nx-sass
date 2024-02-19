@@ -1,26 +1,33 @@
-name: Releases
+name: Create Release
+
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  changelog:
+  release-changelog:
+    name: Changelog & Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
-      - name: Conventional Changelog Action
+      - name: 🛡️ Obtain GitOpsLover Installation Access Token
+        id: app_auth
+        run: |
+          TOKEN="$(npx obtain-github-app-installation-access-token ci ${{ secrets.GITOPSLOVER_APP_TOKEN }})"
+          
+          echo "::add-mask::$TOKEN"
+          echo "::set-output name=token::$TOKEN"
+
+      - name: 📥 Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Update Changelog
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.7.1
+        uses: TriPSs/conventional-changelog-action@v5.2.0
         with:
-          github-token: ${{ secrets.PA_TOKEN }}
+          github-token: ${{ steps.app_auth.outputs.token }}
           version-file: './package.json,./package-lock.json'
-      - name: create release
-        uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          git-user-name: 'gitopslover[bot]'
+          git-user-email: '160535767+gitopslover[bot]@users.noreply.github.com'
+
+      
