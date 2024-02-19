@@ -12,7 +12,7 @@ import { NormalizedSchema } from './normalized-schema';
  */
 export default function addStylelintConfig(tree: Tree, options: NormalizedSchema): void {
     const config = {
-        extends: [joinPathFragments(offsetFromRoot(options.directory), '.stylelintrc.json')],
+        extends: [joinPathFragments(offsetFromRoot(`libs/${options.directory}`), '.stylelintrc.json')],
         ignoreFiles: ['!**/*'],
         overrides: [
             {
@@ -22,5 +22,5 @@ export default function addStylelintConfig(tree: Tree, options: NormalizedSchema
         ],
     };
 
-    writeJson<Config>(tree, joinPathFragments(options.directory, '.stylelintrc.json'), config);
+    writeJson<Config>(tree, joinPathFragments('libs/', options.directory, '.stylelintrc.json'), config);
 }
