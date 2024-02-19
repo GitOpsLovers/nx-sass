@@ -12,7 +12,7 @@ export default function createProject(tree: Tree, options: NormalizedSchema): vo
         name: options.name,
         targets: {
             build: {
-                executor: '@nx/sass:compiler',
+                executor: 'nx-sass:compiler',
                 outputs: ['{options.outputPath}'],
                 options: {
                     outputPath: 'dist',

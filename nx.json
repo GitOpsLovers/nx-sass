@@ -18,6 +18,6 @@
     }
   },
   "generators": {
-    "@nx/sass:library": {}
+    "nx-sass:library": {}
   }
 }

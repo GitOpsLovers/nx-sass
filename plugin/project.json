@@ -1,5 +1,5 @@
 {
-  "name": "@nx/sass",
+  "name": "@gitopslovers/nx-sass",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "plugin/src",
   "projectType": "library",

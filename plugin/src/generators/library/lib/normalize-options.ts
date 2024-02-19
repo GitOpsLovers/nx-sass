@@ -11,7 +11,7 @@ export default async function normalizeOptions(host: Tree, options: Partial<Sche
         name: options.name,
         projectType: 'library',
         directory: options.directory,
-        callingGenerator: '@nx/sass:library',
+        callingGenerator: 'nx-sass:library',
     });
 
     // Set defaults and then overwrite with user options
