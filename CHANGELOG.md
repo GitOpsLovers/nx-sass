@@ -1,4 +1,14 @@
-# 1.1.0 (2024-02-19)
+# [1.2.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.1.0...v1.2.0) (2024-02-20)
+
+
+### Features
+
+* add clean architecture to the generator ([cbb0caa](https://github.com/GitOpsLovers/nx-sass/commit/cbb0caacb50c73d67adf84e928fb2edff41c1fa2))
+* add testing to all generator use cases ([235ad5f](https://github.com/GitOpsLovers/nx-sass/commit/235ad5f9c85c7d42c18ef8fa74b7ca4956a78671))
+
+
+
+# [1.1.0](https://github.com/GitOpsLovers/nx-sass/compare/8ce8aafaa0ef2d32cea87a4b212dfb9c06204da3...v1.1.0) (2024-02-19)
 
 
 ### Bug Fixes
