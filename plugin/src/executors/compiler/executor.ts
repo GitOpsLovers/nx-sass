@@ -43,7 +43,7 @@ export default async function runExecutor(options: CompileExecutorSchema) {
         sassCommand += ' --no-source-map';
     }
 
-    if(options.watch) {
+    if (options.watch) {
         sassCommand += ' --watch';
     }
 

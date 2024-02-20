@@ -1,10 +1,11 @@
 import { readNxJson, updateNxJson, type Tree } from '@nx/devkit';
-import type { NormalizedSchema } from './normalized-schema';
 
 /**
  * Set generator defaults
+ *
+ * @param tree The file tree
  */
-export default function setGeneratorDefaults(tree: Tree, options: NormalizedSchema): void {
+export default function setGeneratorDefaults(tree: Tree): void {
     const nxJson = readNxJson(tree);
 
     nxJson.generators = nxJson.generators ?? {};

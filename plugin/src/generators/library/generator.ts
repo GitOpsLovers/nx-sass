@@ -1,13 +1,13 @@
 import { GeneratorCallback, Tree, installPackagesTask } from '@nx/devkit';
 import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
 import { Schema } from './schema';
-import addDependencies from './lib/add-dependencies';
-import addStylelintConfig from './lib/add-stylelint-config';
-import addStylelintRootConfig from './lib/add-stylelint-root-config';
-import createFiles from './lib/create-files';
-import createProject from './lib/create-project';
-import normalizeOptions from './lib/normalize-options';
-import setGeneratorDefaults from './lib/set-generator-defaults';
+import addDependencies from './application/add-dependencies.use-case';
+import addStylelintConfig from './application/add-stylelint-config.use-case';
+import addStylelintRootConfig from './application/add-stylelint-root-config.use-case';
+import createFiles from './application/create-files.use-case';
+import createProjectConfiguration from './application/create-project-configuration.use-case';
+import normalizeOptions from './application/normalize-options.use-case';
+import setGeneratorDefaults from './application/set-generator-defaults.use-case';
 
 /**
  * Library generator
@@ -20,11 +20,11 @@ import setGeneratorDefaults from './lib/set-generator-defaults';
 export async function libraryGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
     const options = await normalizeOptions(tree, schema);
 
-    createProject(tree, options);
+    createProjectConfiguration(tree, options);
 
     await createFiles(tree, options);
 
-    setGeneratorDefaults(tree, options);
+    setGeneratorDefaults(tree);
 
     addDependencies(tree);
 

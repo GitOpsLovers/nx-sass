@@ -1,5 +1,5 @@
 import { ProjectConfiguration, Tree, addProjectConfiguration } from '@nx/devkit';
-import { NormalizedSchema } from './normalized-schema';
+import { NormalizedSchema } from '../domain/normalized-schema';
 
 /**
  * Create a new project in the workspace.
@@ -7,11 +7,12 @@ import { NormalizedSchema } from './normalized-schema';
  * @param tree The current file tree
  * @param options The options provided to the generator
  */
-export default function createProject(tree: Tree, options: NormalizedSchema): void {
+export default function createProjectConfiguration(tree: Tree, options: NormalizedSchema): void {
     const project: ProjectConfiguration = {
         name: options.name,
         projectType: 'library',
         root: `libs/${options.directory}`,
+        sourceRoot: `libs/${options.directory}`,
         targets: {
             build: {
                 executor: 'nx-sass:compiler',

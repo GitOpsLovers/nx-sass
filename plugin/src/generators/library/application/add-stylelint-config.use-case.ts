@@ -2,7 +2,7 @@ import {
     Tree, joinPathFragments, offsetFromRoot, writeJson,
 } from '@nx/devkit';
 import type { Config } from 'stylelint';
-import { NormalizedSchema } from './normalized-schema';
+import { NormalizedSchema } from '../domain/normalized-schema';
 
 /**
  * Add Stylelint configuration to the project
