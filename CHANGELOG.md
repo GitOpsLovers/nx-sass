@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.2.0...v1.3.0) (2024-02-22)
+
+
+### Features
+
+* add generating message ([7c97b47](https://github.com/GitOpsLovers/nx-sass/commit/7c97b47b465172d719143a76ef50d6681707e5db))
+
+
+
 # [1.2.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.1.0...v1.2.0) (2024-02-20)
 
 
