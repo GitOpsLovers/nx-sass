@@ -20,6 +20,8 @@ import setGeneratorDefaults from './application/set-generator-defaults.use-case'
 export async function libraryGenerator(tree: Tree, schema: Partial<Schema>): Promise<GeneratorCallback> {
     const options = await normalizeOptions(tree, schema);
 
+    console.log('⚙️ Generating library...');
+
     createProjectConfiguration(tree, options);
 
     await createFiles(tree, options);
