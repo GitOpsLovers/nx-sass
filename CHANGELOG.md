@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.3.0...v1.4.0) (2024-02-22)
+
+
+### Features
+
+* add NPM publication workflow ([3878264](https://github.com/GitOpsLovers/nx-sass/commit/3878264c0e3ea5438e8ae0027e0cc4895310b6ae))
+
+
+
 # [1.3.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.2.0...v1.3.0) (2024-02-22)
 
 
