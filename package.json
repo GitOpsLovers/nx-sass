@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "build": "npx nx build nx-sass",
-    "prepublish": "npx nx build nx-sass",
     "publish": "cd dist && npm publish"
   },
   "files": [
