@@ -35,6 +35,6 @@ jobs:
 
       - uses: JS-DevTools/npm-publish@v3
         with:
-          token: ${{ steps.app_auth.outputs.token }}
+          token: ${{ secrets.NPM_ACCESS_TOKEN }}
           registry: "https://registry.npmjs.org"
           package: "dist"
