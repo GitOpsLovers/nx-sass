@@ -1,6 +1,6 @@
 {
   "name": "@gitopslovers/nx-sass",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "NX plugin for generating Sass-based projects.",
   "license": "MIT",
   "scripts": {
