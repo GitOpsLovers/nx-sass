@@ -15,7 +15,7 @@ export default function createProjectConfiguration(tree: Tree, options: Normaliz
         sourceRoot: `libs/${options.directory}`,
         targets: {
             build: {
-                executor: 'nx-sass:compiler',
+                executor: '@gitopslovers/nx-sass:compiler',
                 outputs: ['{options.outputPath}'],
                 options: {
                     outputPath: 'dist',
@@ -29,7 +29,7 @@ export default function createProjectConfiguration(tree: Tree, options: Normaliz
                 defaultConfiguration: 'production',
             },
             serve: {
-                executor: 'nx-sass:compiler',
+                executor: '@gitopslovers/nx-sass:compiler',
                 options: {
                     watch: true,
                     outputPath: 'dist',
