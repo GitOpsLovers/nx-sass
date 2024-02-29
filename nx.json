@@ -17,7 +17,5 @@
       ]
     }
   },
-  "generators": {
-    "nx-sass:library": {}
-  }
+  "generators": {}
 }
