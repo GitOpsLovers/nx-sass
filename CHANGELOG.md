@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.4.0...v1.5.0) (2024-02-29)
+
+
+### Bug Fixes
+
+* add step to install dependencies on publish workflow ([2c03641](https://github.com/GitOpsLovers/nx-sass/commit/2c03641c9f798aabad4d29ed85ed1fe59f22d8f8))
+* change generated default configuration ([efdac48](https://github.com/GitOpsLovers/nx-sass/commit/efdac488fa62dc01b1ea6fc8f26bd5b99c24110c))
+* fix package-lock.json versions ([8900740](https://github.com/GitOpsLovers/nx-sass/commit/8900740c03d5cd3c8da89a8963e99c0c26f565c9))
+
+
+### Features
+
+* change generator command name ([7840869](https://github.com/GitOpsLovers/nx-sass/commit/78408697c0ff640ad6e4f3da9465e565d43a0db7))
+* change generator name on nx.json ([9333ded](https://github.com/GitOpsLovers/nx-sass/commit/9333ded92b0dac4d150812082f3eb74de32e365b))
+
+
+
 # [1.4.0](https://github.com/GitOpsLovers/nx-sass/compare/v1.3.0...v1.4.0) (2024-02-22)
 
 
