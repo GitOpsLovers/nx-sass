@@ -38,13 +38,13 @@ npx create-nx-workspace@latest
 ## 💻 Installation
 
 ```bash
-npm install -D nx-sass
+npm install -D @gitopslovers/nx-sass
 ```
 
 ## 🛠️ Creating Nx Sass Library
 
 ```bash
-nx g nx-sass:lib <sass-lib-name>
+nx g @gitopslovers/nx-sass:lib <sass-lib-name>
 ```
 
 ## 🏗️ Building Nx Sass Library
