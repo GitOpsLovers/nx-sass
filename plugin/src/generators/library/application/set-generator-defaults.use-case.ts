@@ -10,8 +10,8 @@ export default function setGeneratorDefaults(tree: Tree): void {
 
     nxJson.generators = nxJson.generators ?? {};
 
-    nxJson.generators['nx-sass:library'] = {
-        ...(nxJson.generators['nx-sass:library'] || {}),
+    nxJson.generators['@gitopslovers/nx-sass:library'] = {
+        ...(nxJson.generators['@gitopslovers/nx-sass:library'] || {}),
     };
 
     updateNxJson(tree, nxJson);

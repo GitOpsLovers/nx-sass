@@ -14,7 +14,7 @@ describe('setGeneratorDefaults', () => {
     it('should set generator defaults', () => {
         const mockNxJson = {
             generators: {
-                'nx-sass:library': {},
+                '@gitopslovers/nx-sass:library': {},
             },
         };
 
@@ -27,7 +27,7 @@ describe('setGeneratorDefaults', () => {
             ...mockNxJson,
             generators: {
                 ...(mockNxJson.generators || {}),
-                'nx-sass:library': {},
+                '@gitopslovers/nx-sass:library': {},
             },
         });
     });
@@ -42,7 +42,7 @@ describe('setGeneratorDefaults', () => {
         expect(readNxJson).toHaveBeenCalledWith(appTree);
         expect(updateNxJson).toHaveBeenCalledWith(appTree, {
             generators: {
-                'nx-sass:library': {},
+                '@gitopslovers/nx-sass:library': {},
             },
         });
     });

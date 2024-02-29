@@ -24,7 +24,7 @@ describe('normalizeOptions', () => {
             name: 'test',
             projectType: 'library',
             directory: 'my-library',
-            callingGenerator: 'nx-sass:library',
+            callingGenerator: '@gitopslovers/nx-sass:library',
         });
 
         expect(normalizedOptions).toEqual({
